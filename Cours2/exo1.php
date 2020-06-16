@@ -9,7 +9,7 @@
         <?php
 
             //exercice 1
-
+            //var //fonctionne pas
             $mvar = "1"; //fonctionne 
             $var7 = "2"; //fonctionne
             $_mvar = "3"; //fonctionne
@@ -17,6 +17,7 @@
             $__élément1 = "5"; //fonctionne
             //$hotel4* = "6"; //fonctionne pas
 
+            //echo var; //fonctionne pas
             echo $mvar;
             echo $var7;
             echo $_mvar;
