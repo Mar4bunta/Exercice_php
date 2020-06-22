@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tp-6</title>
+    </head>
+    <body>
+
+        <h1>Formulaire à remplire</h1>
+
+        <form action="index.php" method="GET">
+
+        <p><select name="select">
+            <option value="Mlle">Mlle</option>
+            <option value="Mme">Mme</option>
+            <option value="M">M</option>
+        </select></p>
+            
+
+        <p id="name">
+
+            <input type="text" name="nom" placeholder="Nom" required="" 
+                oninvalid="this.setCustomValidity('Prénom laissé vide.')" 
+                oninput="setCustomValidity('')">
+
+            <input type="text" name="prenom" placeholder="Prénom" required="" 
+                oninvalid="this.setCustomValidity('Nom laissé vide.')" 
+                oninput="setCustomValidity('')"></p> <!-- change le message si champ vide puis clear le message quand rentre du texte -->
+
+       <p>Adresse mail : <br>
+
+        <input type="email" name="email" placeholder="Votre email" required="" 
+            oninvalid="this.setCustomValidity('Entrez une adresse mail valide.')" 
+            oninput="setCustomValidity('')"></p>
+
+        <p>Mot de passe : <br>
+
+            <input id="password" type="password" name="password" placeholder="mot de passe" required></p>
+
+        <p>Confirmez votre mot de passe : <br>
+
+            <input id="password2" type="password" name="password" placeholder="confirmer mot de passe" required></p>
+
+        
+        <input type="submit" value="Valider">
+
+        <script type="text/javascript">
+
+            let password = document.getElementById("password"),
+            password2 = document.getElementById("password2");
+
+            function okPassword(){
+
+                if(password.value != password2.value){
+
+                    password2.setCustomValidity("Mot de passe incorecte");
+
+                }else{
+
+                    password2.setCustomValidity("");
+
+                }
+
+            }
+
+            password.onchange = okPassword;
+            password2.onkeyup = okPassword;
+
+        </script>
+
+
+    </body>
+</html>
