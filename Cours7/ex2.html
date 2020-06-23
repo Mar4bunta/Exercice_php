@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exercice 2</title>
+    </head>
+
+    <body>
+        
+        <form action="ex2.php" method="POST">
+
+            <h3>Vos coordonnées</h3><br>
+
+            Nom : <input type="text" name="nom" placeholder="votre nom"><br>
+            Prénom : <input type="text" name="prenom" placeholder="votre prenom"><br>
+            Mail : <input type="text" name="email" placeholder="votre mail"><br>
+            Code : <input type="text" name="code" placeholder="ex : 68100"><br>
+
+            <input type="radio" name="genre" value="Homme">Homme <br>
+            <input type="radio" name="genre" value="Femme">Femme <br>
+
+            <select name="pays" >
+                <option value="France">France</option>
+                <option value="Allemagne">Allemagne</option>
+                <option value="Suisse">Suisse</option>
+                <option value="Italie">Italie</option>
+                <option value="Belgique">Belgique</option>
+            </select><br>
+
+            <h3>Vos goûts</h3>
+
+            <input type="checkbox" name="gouts" value="Pommes">Pommes <br>
+            <input type="checkbox" name="gouts" value="Poires">Poires <br>
+            <input type="checkbox" name="gouts" value="Scoubidous">Scoubidous <br>
+
+            <textarea name="descr" rows="5" cols="35">Décrivez vos goûts en détail</textarea><br>
+
+            <h3>Envoyez nous votre photo</h3>
+
+            <input type="file" name="photo"><br>              
+            
+            <p><input type="reset" name="effacer" >
+            <input type="submit" name="valider"></p>
+                
+        </form>
+
+    </body>
+</html>

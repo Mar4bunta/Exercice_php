@@ -18,9 +18,7 @@
         </select></p>
             
 
-        <p id="name">
-
-            <input type="text" name="nom" placeholder="Nom" required="" 
+        <p><input type="text" name="nom" placeholder="Nom" required="" 
                 oninvalid="this.setCustomValidity('Nom laissé vide.')" 
                 oninput="setCustomValidity('')">
 
@@ -28,17 +26,17 @@
                 oninvalid="this.setCustomValidity('Prénom laissé vide.')" 
                 oninput="setCustomValidity('')"></p> <!-- change le message si champ vide puis clear le message quand rentre du texte -->
 
-       <p>Adresse mail : <br>
+       <p>Adresse mail :<br>
 
         <input type="email" name="email" placeholder="Votre email" required="" 
             oninvalid="this.setCustomValidity('Entrez une adresse mail valide.')" 
             oninput="setCustomValidity('')"></p>
 
-        <p>Mot de passe : <br>
+        <p>Mot de passe :<br>
 
             <input id="password" type="password" name="password" placeholder="mot de passe" required></p>
 
-        <p>Confirmez votre mot de passe : <br>
+        <p>Confirmez votre mot de passe :<br>
 
             <input id="password2" type="password" name="password" placeholder="confirmer mot de passe" required></p>
 
@@ -47,10 +45,12 @@
 
         <script type="text/javascript">
 
-            let password = document.getElementById("password"),
-            password2 = document.getElementById("password2");
+            
 
             function okPassword(){
+
+                let password = document.getElementById("password"),
+                password2 = document.getElementById("password2");
 
                 if(password.value != password2.value){
 
